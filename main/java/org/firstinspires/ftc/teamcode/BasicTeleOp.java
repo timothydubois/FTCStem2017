@@ -57,7 +57,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
         private ElapsedTime runtime = new ElapsedTime();
     DcMotor leftMotor = null;   // uncommented
     DcMotor rightMotor = null;  // uncommented
-    DcMotor clawMotor = null;
+    //DcMotor clawMotor = null;
 
     @Override
     public void runOpMode() {
@@ -71,7 +71,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
          */
         leftMotor  = hardwareMap.dcMotor.get("left_drive");   // uncommented
         rightMotor = hardwareMap.dcMotor.get("right_drive");  // uncommented
-        clawMotor = hardwareMap.dcMotor.get("left_arm");
+        //clawMotor = hardwareMap.dcMotor.get("left_arm");
 
 
 
@@ -86,7 +86,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
-            telemetry.addData("Status", "Run Time: " + runtime.toString());
+            telemetry.addData("Input", "left: " + -gamepad1.left_stick_y);
             telemetry.update();
 
             float left_power = -gamepad1.left_stick_y;

@@ -22,16 +22,16 @@ public class STEM_Autonomous_Test extends LinearOpMode
     private DcMotor motorLeft;
     private DcMotor motorRight;
 
-//    private Servo flipperLeft;
+    private Servo flipperLeft;
 //    private Servo flipperRight;
 //
 //    private TouchSensor touch;
 //
-//    private static final double LEFT_RETRACTED_POSITION = 0.4;
-//    private static final double LEFT_EXTENDED_POSITION = 0.6;
-//    private static final double RIGHT_RETRACTED_POSITION = 0.6;
-//    private static final double RIGHT_EXTENDED_POSITION = 0.4;
-//    private static final double ARM_CENTER_POSITION = 0.5;
+    private static final double LEFT_RETRACTED_POSITION = 0.4;
+    private static final double LEFT_EXTENDED_POSITION = 0.6;
+    private static final double RIGHT_RETRACTED_POSITION = 0.6;
+    private static final double RIGHT_EXTENDED_POSITION = 0.4;
+    private static final double ARM_CENTER_POSITION = 0.5;
 
 
     @Override
@@ -43,7 +43,7 @@ public class STEM_Autonomous_Test extends LinearOpMode
 
         motorRight.setDirection(DcMotor.Direction.REVERSE);
 
-        //flipperLeft = hardwareMap.servo.get("left_hand");
+        flipperLeft = hardwareMap.servo.get("left_hand");
         //flipperRight = hardwareMap.servo.get("right_hand");
 
         //touch = hardwareMap.touchSensor.get("touchey");
@@ -58,7 +58,7 @@ public class STEM_Autonomous_Test extends LinearOpMode
 
          //   if (touch.isPressed()) {
 
-                Thread.sleep(22500);
+                Thread.sleep(2500);
 
                 motorLeft.setPower(0.2);
                 motorRight.setPower(0.2);
@@ -69,11 +69,11 @@ public class STEM_Autonomous_Test extends LinearOpMode
           //  }
 
 
-//            flipperLeft.setPosition(LEFT_EXTENDED_POSITION);
+            flipperLeft.setPosition(LEFT_EXTENDED_POSITION);
 //            flipperRight.setPosition(RIGHT_EXTENDED_POSITION);
-//            Thread.sleep(1000);
+            Thread.sleep(1000);
 //
-//            flipperLeft.setPosition(LEFT_RETRACTED_POSITION);
+            flipperLeft.setPosition(LEFT_RETRACTED_POSITION);
 //            flipperRight.setPosition(RIGHT_RETRACTED_POSITION);
 //            Thread.sleep(1000);
 
